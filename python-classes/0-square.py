@@ -4,8 +4,8 @@
 this clase contains an empty square
 """
 
-class Square:
 
+class Square:
     """
     A class representing a square
 
