@@ -5,12 +5,12 @@ this class contains a define square
 """
 
 
-class square:
+class Square:
     """
     a class to represent a square
 
     Attributes:
-        the size of Square
+       __size: the size of Square
 
     Method:
         None
