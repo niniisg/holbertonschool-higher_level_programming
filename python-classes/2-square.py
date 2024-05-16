@@ -1,10 +1,5 @@
 #!/usr/bin/python3
 
-"""
-
-"""
-
-
 class Square:
     """
     a class to represent a square
@@ -15,7 +10,6 @@ class Square:
         None
     """
     def __init__(self, size=0):
-
         if type(size) is not int:
             raise TypeError("size must be an integer")
 
