@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+this class contains a square
+that defines a square.
+"""
+
 
 class Square:
     """
@@ -10,6 +15,10 @@ class Square:
         None
     """
     def __init__(self, size=0):
+        """
+        this is a constrocture that takes an option
+        argumet name size, and it validates if is an int.
+         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
 
