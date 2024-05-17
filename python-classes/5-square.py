@@ -18,7 +18,7 @@ class Square:
         """
         this is a constrocture that takes an option
         argumet name size, and it validates if is an int.
-         """
+        """
         if type(size) is not int:
             raise TypeError("size must be an integer")
 
@@ -60,3 +60,6 @@ class Square:
         for i in range(self.__size):
             print("#" * self.__size, end="")
             print()
+
+        if self.__size == 0:
+            print("--")
