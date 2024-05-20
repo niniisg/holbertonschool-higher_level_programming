@@ -4,6 +4,8 @@
 This file has function add integer
     
 """
+
+
 def add_integer(a, b=98):
     """
     verifies if a or b are int or float adds two numbers and returns the result.
