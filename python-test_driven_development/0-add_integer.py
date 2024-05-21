@@ -1,13 +1,14 @@
 #!/usr/bin/python3
+"""
+
+This file has function add integer
+    
+"""
+
 
 def add_integer(a, b=98):
     """
-    verifies if a or b are int or float
-    adds two numbers and returns the result.
-    returns:
-    int or float: the sum of the two input number
-    raises:
-    TypeError: if either a or b is not an integer or a float
+    verifies if a or b are int or float adds two numbers and returns the result.
     """
 
     if not isinstance(a, int) and not isinstance(a, float):
