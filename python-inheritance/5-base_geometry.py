@@ -2,6 +2,8 @@
 """
 this class contain an empty BaseGeometry
 """
+
+
 class BaseGeometry:
     """
     a class representing a BaseGeometry
