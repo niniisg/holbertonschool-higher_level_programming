@@ -7,7 +7,7 @@ class Animal(ABC):
     @abstractmethod
     def sound(self):
         """
-        this method shoudl return a string
+        this method should return a string
         representing the sound made by the animal
          """
         pass
@@ -21,4 +21,4 @@ class Dog(Animal):
 
 class Cat(Animal):
     def sound(self):
-        return "meow"
+        return "Meow"
