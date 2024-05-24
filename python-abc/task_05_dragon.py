@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 
 class SwimMixin:
+
     def swim(self):
-        return("The creatures swims!")
+        return("The creature swims!")
 
 
 class FlyMixin:
     def fly(self):
-        return("The creatures flies!")
+        return("The creature flies!")
 
 
 class Dragon(SwimMixin, FlyMixin):
-    pass
 
     def roar(self):
         return("The dragon roars!")
