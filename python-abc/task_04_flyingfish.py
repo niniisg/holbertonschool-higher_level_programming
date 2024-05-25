@@ -5,12 +5,14 @@ class Fish:
     def habitat(self):
         print("The fish lives in water")
 
+
 class Bird:
     def fly(self):
         print("The bird is flying")
 
     def habitat(self):
         print("The bird lives in the skys")
+
 
 class FlyingFish(Fish, Bird):
 
