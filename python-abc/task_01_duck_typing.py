@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 from abc import ABC, abstractmethod
 from math import pi
 
@@ -19,13 +18,13 @@ class Shape(ABC):
 class Circle(Shape):
 
     def __init__(self, radius):
-        self.radius = radius
+        self.__radius = radius
 
     def area(self):
-        return pi * self.radius ** 2
+        return pi * (self.__radius ** 2)
 
     def perimeter(self):
-        return 2 * pi * self.radius
+        return 2 * pi * self.__radius
 
 
 class Rectangle(Shape):
@@ -35,11 +34,12 @@ class Rectangle(Shape):
         self.__height = height
 
     def area(self):
-        return self.__height * self.__width
+        return self.__width * self.__height
 
     def perimeter(self):
-        return 2 * (self.__height + self.__width)
+        return 2 * (self.__width + self.__height)
 
-    def shape_info(shape):
-        print("Area:", shape.area())
-        print("Perimeter:", shape.perimeter())
+
+def shape_info(shape):
+    print("Area:", shape.area())
+    print("Perimeter:", shape.perimeter())
