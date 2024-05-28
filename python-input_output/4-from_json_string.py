@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+
 import json
+"""
+defines a JSON object funtion
+"""
 
 
 def from_json_string(my_str):
