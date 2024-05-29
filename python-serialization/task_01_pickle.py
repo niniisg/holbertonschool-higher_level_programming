@@ -20,14 +20,14 @@ class CustomObject:
             with open(filename, "wb") as f:
                 pickle.dump(self, f)
         except Exception as e:
-            print("Error occured while serializing:", e)
+            print(f"Error occured while serializing:", {e})
         return None
 
     @classmethod
     def deserialize(cls, filename):
         try:
             with open(filename, "rb")as f:
-                obj = pickle.load(f)
+                return pickle.load(f)
         except Exception as e:
-            print("error occured during deserializing:", e)
-        return obj
+            print(f"error occured during deserializing:", {e})
+        return None
