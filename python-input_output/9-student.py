@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+module that represents students
+"""
 class Student:
     """
     represent a student
