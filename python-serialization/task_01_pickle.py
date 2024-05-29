@@ -13,7 +13,7 @@ class CustomObject:
     def display(self):
         print("Name:", self.name)
         print("Age:", self.age)
-        print("Is_student:", self.is_student)
+        print("Is student:", self.is_student)
 
     def serialize(self, filename):
         try:
