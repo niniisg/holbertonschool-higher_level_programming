@@ -14,7 +14,7 @@ def serialize_to_xml(dictionary, filename):
 def deserialize_from_xml(filename):
     tree = ET.parse(filename)
     root = tree.getroot()
-    dictionay = {}
+    dictionary = {}
     for element in root:
-        result[element.tag] = element.text
+        dictionary[element.tag] = element.text
     return dictionary
