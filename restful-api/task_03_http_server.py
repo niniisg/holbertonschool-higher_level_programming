@@ -17,10 +17,10 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_header('Content-type', 'application/json')
             self.end_headers()
             data = {
-                "name": "John",
-                "age": 30,
-                "city": "New York"
-            }
+                    "name": "John",
+                    "age": 30,
+                    "city": "New York"
+                    }
             self.wfile.write(json.dumps(data).encode())
 
         elif self.path == '/status':
@@ -43,7 +43,6 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            message = '404 Not found'
             self.wfile.write(b"404 not found")
 
 
