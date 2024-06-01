@@ -31,7 +31,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
         elif self.path == '/info':
             self.send_response(200)
-            self.send_header("Content-type', 'application/json")
+            self.send_header("Content-type", "application/json")
             self.end_headers()
             info = {
                 "version": "1.0",
