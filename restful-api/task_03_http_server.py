@@ -20,7 +20,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                     "name": "John",
                     "age": 30,
                     "city": "New York"
-                    }
+            }
             self.wfile.write(json.dumps(data).encode())
 
         elif self.path == '/status':
@@ -43,7 +43,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            self.wfile.write(b"404 not found")
+            self.wfile.write(b"404 Not Found")
 
 
 def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler):
