@@ -1,11 +1,6 @@
 -- writing scrip that list all cities
 
-SELECT id, name
-
+SELECT cities.id, cities.name, states.name
 FROM cities
-WHERE state_id = (
-SELECT id
-FROM states
-WHERE name = 'California'
-)
-ORDER BY cities.id ASC;
+LEFT JOIN states ON states.id = cities.state_id
+ORDER BY cities.id;
