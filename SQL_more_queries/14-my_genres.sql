@@ -1,3 +1,4 @@
+-- importing database dump from hbtn_0d_tvshows
 
 SELECT tv_genres.name
 FROM tv_genres
