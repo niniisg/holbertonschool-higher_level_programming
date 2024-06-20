@@ -4,6 +4,7 @@
 this module writes a scrip tha list all states
 with name starting with upper N
 """
+
 import MySQLdb
 import sys
 
@@ -21,6 +22,7 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY states.id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
-        print(row)
+        if row[1][0] == "N":
+            print(row)
     cur.close()
     conn.close()
