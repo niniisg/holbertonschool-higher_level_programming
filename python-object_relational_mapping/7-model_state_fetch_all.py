@@ -13,7 +13,7 @@ if __name__ == "__main__":
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost/{}".format(
             sys.argv[1], sys.argv[2], sys.argv[3]
-        ),
+        )
         pool_pre_ping=True,
     )
     Base.metadata.create_all(engine)
@@ -24,7 +24,4 @@ if __name__ == "__main__":
 
     for state in states:
         print("{}: {}".format(states.id, state.name))
-
-    states = session.query(State).order_by(State.id.asc()).all
-
     session.close()
