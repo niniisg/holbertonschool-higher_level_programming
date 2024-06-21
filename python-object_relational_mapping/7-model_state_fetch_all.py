@@ -7,7 +7,7 @@ from the database hbtn_0e_6_usa using SQLAlchemy
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
-from sqlalchemy.orm import session
+from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    session = session(engine)
+    session = Session(engine)
 
     for state in session.query(State).order_by(State.id).all():
         print("{}: {}".format(state.id, state.name))
