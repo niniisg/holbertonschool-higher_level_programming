@@ -12,16 +12,13 @@ from sqlalchemy.orm import session
 if __name__ == "__main__":
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost/{}".format(
-            sys.argv[1], sys.argv[2], sys.argv[3]
-        )
-        pool_pre_ping=True,
-    )
+            sys.argv[1], sys.argv[2], sys.argv[3]),
+        pool_pre_ping=True,)
+
     Base.metadata.create_all(engine)
 
-    Session = session(engine)
-    session = session()
-    states = session.query(State).order_by(State.id.asc()).all
+    session = session(engine)
 
-    for state in states:
-        print("{}: {}".format(states.id, state.name))
+    for state in session.query(State).order_by(State.id.asc()).all():
+        print("{}: {}".format(state.id, state.name))
     session.close()
