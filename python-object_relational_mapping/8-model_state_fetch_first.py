@@ -24,5 +24,5 @@ if __name__ == "__main__":
 
     state_id = session.query(State).first().id
     state_name = session.query(State).first().name
-    print("{}: {}".format(state_id, state_name))    
+    print("{}: {}".format(state_id, state_name))
     session.close()
