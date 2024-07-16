@@ -16,14 +16,6 @@ def about():
 def contact():
     return render_template('contact.html')
 
-@app.route('/footer')
-def footer():
-        return render_template('footer.html')
-    
-@app.route('header/')
-def header():
-    return render_template('/header.html')
-
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
     
