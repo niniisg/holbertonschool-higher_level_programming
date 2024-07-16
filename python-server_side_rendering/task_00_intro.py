@@ -23,18 +23,18 @@ def generate_invitations(template, attendees):
         
             for f, h in attendees[i].items():
             
-                invitation_text = template.replace("{name}", attendees[i]["name"])
-                invitation_text = invitation_text.replace("{event_title}", attendees[i]["event_title"])
-                invitation_text = invitation_text.replace("{event_date}", attendees[i]["event_date"])
-                invitation_text = invitation_text.replace("{event_location}", attendees[i]["event_location"])
+                invitation_text1 = template.replace("{name}", attendees[i]["name"])
+                invitation_text2 = invitation_text1.replace("{event_title}", attendees[i]["event_title"])
+                invitation_text3 = invitation_text2.replace("{event_date}", attendees[i]["event_date"])
+                invitation_text4 = invitation_text3.replace("{event_location}", attendees[i]["event_location"])
 
             with open(f"output_{i+1}.txt", 'w') as file:
-                file.write(invitation_text)
+                file.write(invitation_text4)
                 
                 if os.path.exists(f"output_{i+1}.txt") == False:
-                    file.write()
+                    file.write(invitation_text4)
                 else:
-                    file.write()
+                    file.write(invitation_text4)
         
     except Exception as e:
         print(e)
