@@ -1,24 +1,23 @@
-#!/usr/bin/python3
-import os
+#!.usr/bin/python3
 
+import os
 def generate_invitations(template, attendees):
     try:
         if not isinstance(template, str):
-            raise ValueError("Template is empty")
+            raise TypeError("template is empty")
         
-        if not isinstance(attendees, list):
-            raise ValueError("No data provided")
-        
-        for attendee in attendees:
-            if not isinstance(attendee, dict):
-                raise TypeError("Error: each attendee record must be a dict")
-        
-        if not template():
-            raise Exception("template must be empty")
-        
-        if not attendees():
-            raise Exception("attendees must be dict")
+        if len(template) == 0:
+            raise IndexError("string is empty")
 
+        if not isinstance(attendees, list): 
+            raise TypeError("attendees not a list")
+        
+        if len(attendees) == 0:
+            raise IndexError("No data provided")
+        
+        if not isinstance(attendees[0], dict):
+            raise TypeError("not a list of dicts")
+        
         for i in range(len(attendees)):
         
             for f, h in attendees[i].items():
